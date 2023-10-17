@@ -1,0 +1,20 @@
+31-05-2023
+
+for insertion record
+1)python manage.py shell
+
+2)>>> from petsapp.models import Student
+>>> res=Student.objects.create(username='good_coder',first_name='good', last_name='coder', mobile='9666545785', email='good@gmail.com')
+>>> res.save()
+>>> data=[Student(username='test',first_name='Test',last_name='user', mobile='6363524178', email='test@gmail.com'),Student(username='developer',first_name='dev', last_name='user',mobile='9696857421', email='dev@gmail.com')]
+>>> Student.objects.bulk_create(data)
+[<Student: Student object (2)>, <Student: Student object (3)>]
+
+3)for fetching single single records
+result=Student.objects.get(id=1)
+>>> result
+<Student: Student object (1)>
+>>> result.username
+'good_coder'
+
+4)get and filter
